@@ -1,0 +1,76 @@
+.title{
+    color: black;
+}
+
+header{
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    
+}
+
+
+mat-toolbar{
+    background-color: transparent;
+    justify-content: space-between;
+    border-bottom: 4px solid #364b66;
+    border-radius: 2px;
+    
+}
+
+button:hover{
+    color: #364b66;
+
+}
+
+
+
+span{
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+img{
+    width: 50px;
+    height: 50px;
+    border-radius: 13px;
+    margin-right: 3px;
+   
+}
+
+button{
+    height: 4rem;
+}
+
+.img{
+    display: flex;  
+    align-items: center;
+}
+
+.active{
+    font-size: 20px;
+    color:#364b66 !important;
+    font-weight: bold;
+}
+
+
+.mobileMenu{
+    display: none;
+    margin-left: 1rem;
+}
+
+@media screen and (max-width: 768px){
+    .mobileMenu{
+        display: block;
+    }
+   
+    .logbuttons{
+        display: none;
+    }
+
+    
+}

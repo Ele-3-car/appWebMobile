@@ -1,0 +1,68 @@
+<div class="container">
+    <div class="details">
+        <h2>Crea il tuo spot!</h2>
+        <form [formGroup]="creationForm" (ngSubmit)="create()">
+            <div class="input-columns">
+                <div class="input-column">
+                    <div class="input-container">
+                        <label for="name">Titolo</label>
+                        <input type="text" id="name" name="name" formControlName="name" placeholder="Inserisci il titolo del tuo spot...">
+                    </div>
+
+                    <div class="input-container">
+                        <label for="image">Immagine</label>
+                        <input type="text" id="image" name="image" formControlName="image" placeholder="URL dell'immagine...">
+                    </div>
+
+                    <div class="image">
+                        <input (change)="onFileSelected($event)" type="file">
+                    </div>
+
+                    <div class="displayImage" *ngIf="imageData">
+                        <img [src]="imageData">
+                    </div>
+
+                    <div class="input-container">
+                        <label for="city">In che posto sei stato?</label>
+                        <input type="text" id="city" name="city" formControlName="city" placeholder="Inserisci la città...">
+                    </div>
+
+                    <div class="input-container">
+                        <label for="shortDescription">Breve descrizione</label>
+                        <textarea id="shortDescription" name="shortDescription" formControlName="shortDescription" rows="3" placeholder="Scrivi una breve descrizione..."></textarea>
+                    </div>
+                </div>
+
+                <div class="input-column">
+                    <div class="input-container">
+                        <label for="description">Descrizione dettagliata</label>
+                        <textarea id="description" name="description" formControlName="description" rows="5" placeholder="Scrivi una descrizione più dettagliata..."></textarea>
+                    </div>
+
+                    <div class="input-container">
+                        <label for="stars">Quanto ti è piaciuto? (star rating)</label>
+                        <input type="number" id="stars" name="stars" formControlName="stars" min="1" max="5" placeholder="Inserisci un numero da 1 a 5...">
+                    </div>
+
+                    <div class="input-container">
+                        <label for="visited">Cosa hai visitato?</label>
+                        <input type="text" id="visited" name="visited" formControlName="visited" placeholder="Cosa hai visitato?">
+                    </div>
+
+                    <div class="input-container">
+                        <label for="toEat">Dove hai mangiato?</label>
+                        <input type="text" id="toEat" name="toEat" formControlName="toEat" placeholder="Dove hai mangiato?">
+                    </div>
+
+                    <div class="input-container">
+                        <label for="duration">Quanto tempo hai trascorso?</label>
+                        <input type="text" id="duration" name="duration" formControlName="duration" placeholder="Quanto tempo hai trascorso?">
+                    </div>
+                </div>
+            </div>
+
+            <button class="back-button" (click)="goBack()">Torna indietro</button>
+            <button class="submit-button" type="submit">Crea</button>
+        </form>
+    </div>
+</div>

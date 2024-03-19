@@ -1,0 +1,39 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 10.5rem;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    margin-right: 11rem;
+    margin-top: 2rem;
+    background-color: #c6bfbf;
+    border-radius: 2rem;
+    
+  }
+
+
+  .details {
+    width: 80%;
+    max-width: 1000px;
+    
+  }
+
+  .one {
+    display: inline-block;
+    width: 45%; /* Larghezza delle colonne */
+    vertical-align: top;
+  }
+
+  .text-input {
+    margin-bottom: 15px;
+    flex: 1 0 200px;
+    height: 200px;
+  }
+
+  
+  .button-wrapper {
+    text-align: center; /* Centra il pulsante */
+    margin-top: 20px;
+  }
+  

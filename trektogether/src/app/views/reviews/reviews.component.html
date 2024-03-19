@@ -1,0 +1,26 @@
+
+
+<div class="container">
+    <div class="details">
+        <a>Crea il tuo spot!</a>
+        <form [formGroup]="creationForm" (ngSubmit)="create()">
+            <div class="one">
+            <text-input
+            [control]="fc.review"
+            [showErrorsWhen]="reviewIsCreated"
+            label="Scrivi qui la tua recensione!">
+            </text-input>
+
+            <text-input
+            [control]="fc.stars"
+            [showErrorsWhen]="reviewIsCreated"
+            label="Inserisci quante stelle ci dai!">
+            </text-input>
+
+        </div>
+
+            <default-button text="Crea"></default-button>
+        </form>
+        <button (click)="goBack()">Torna indietro</button>
+    </div>
+</div>

@@ -1,0 +1,156 @@
+.immagine{
+    position: relative;
+    align-self: center; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.immagine img {
+    width: 100em; 
+    height: 25em; 
+    object-fit: cover; 
+    align-self: center;
+    border-radius: 10px;
+}
+
+
+span{
+    position: absolute;
+    top: 27%; 
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    text-align: center; 
+    color: white;
+    font-weight: bold;
+    font-size: 5rem;
+    text-shadow:2px 5px 3px rgba(0, 0, 0, 0.3);;
+    padding: 10px; 
+    letter-spacing: 5px;
+}
+
+.motto{
+    position: absolute;
+    top: 35.5%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    text-align: center; 
+    color: white;
+    letter-spacing: 5px;
+}
+.centred-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .text {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 2rem;
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+  .text p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+  }
+  
+  .social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .social img {
+    position: relative;
+    bottom: 9rem;
+  }
+  
+  .box {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    bottom: 25rem;
+  }
+  
+  
+  .box .two {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(206, 205, 205);
+    padding: 2rem;
+    width: 20vw;
+    margin-right: 2.5rem;
+    border-radius: 1.5rem;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    
+  }
+
+  .box .one{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: lightgray;
+    padding: 1.40rem;
+    width: 20vw;
+    margin-left: 2.5rem;
+    border-radius: 1.5rem;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  
+  .box a {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+
+  .box .one img{
+    width: 30%;
+    height: auto;
+    border-radius: 50%;
+    position: relative;
+    bottom: 1.5rem;
+  }
+
+  .box .two img{
+    width: 20%;
+    height: auto;
+    border-radius: 50%;
+    position: relative;
+    bottom: 1.5rem;
+  }
+  .box .one div{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .box .two div{
+    display: flex;
+    flex-direction: row;
+  }

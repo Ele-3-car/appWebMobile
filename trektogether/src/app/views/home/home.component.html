@@ -1,0 +1,111 @@
+<div class="all">
+
+    
+    <div id="welcome">
+        <!-- Content area -->
+            <div class="centred-container" *ngIf="showWelcomeScreen ; else searchResults">
+            <!-- Welcome screen content -->
+            <div class="immagine">
+                <img src="../../../assets/images/4.jpg" alt="">
+            </div>
+    
+            <div class="title">
+                <span>TrekTogether</span>
+                <a class="motto">Viaggia Scopri Condividi</a>
+            </div>
+    
+            <app-search></app-search>
+            
+            
+            <div class="linea">
+                <div class="options">
+                    <button class="crea"routerLink="/create" *ngIf="isAuth">crea</button>
+                    <button>Destinazione</button>
+                    <button (click)="getAll()">Itinerari</button>
+                    <button class="tipForTrip" routerLink="/trip">TipForTrip</button>
+                    <Button>Le piu Gettonate</Button>
+                    
+                </div>
+    
+                <app-carousel [images]="immagini" [autoSlide]="true"></app-carousel>
+            </div>
+                
+            </div>
+
+            <ul class="recensioni">
+                <li *ngFor="let reviews of review">
+                    <a class="container" routerLink="/reviews/{{reviews.id}}">
+                        <div class="review">
+                            <div class="Author">
+                                {{reviews.name}}
+                            </div>
+                            <div class="ReviewStars">
+                                <app-star-rating [star]="reviews.stars"></app-star-rating>
+                            </div>
+                            <div class="review">
+                                {{reviews.review}}
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            
+        
+    
+    </div>
+        
+    
+       
+    
+    <ng-template #searchResults> 
+        <div *ngIf="!showWelcomeScreen">
+            <div class="secHead">
+                <button class="indietro"(click)="back()"><mat-icon>arrow_back</mat-icon></button>
+                <a class="spots">SPOTS:</a>
+                <a class="spacer"></a>
+            </div>
+        <app-not-found
+            [visible]="!spots || !spots.length"
+            resetLinkText="Torna alla home"
+            >
+        </app-not-found>
+        
+        
+        
+        <ul>
+            <li *ngFor="let spot of spots">
+                <a routerLink="/spot/{{spot.id}}">
+                    <img [src]="spot.image" [alt]="spot.name">
+                    <div class="content">
+                        <div class="city">
+                            <mat-icon>location_on</mat-icon>{{spot.city}}
+                        </div>
+                        <div class="line">
+                            <div class="name">
+                                {{spot.name}}
+                            </div>
+                            <div class="duration">
+                                {{spot.duration}} Giorni
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="shortDescription">
+                            {{spot.shortDescription}}
+                        </div>
+                        <div class="favorite {{spot.favorite? '' : 'not'}}">
+                            ❤️
+                        </div>
+                        <div class="star">
+                            <app-star-rating [star]="spot.stars"></app-star-rating>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    </ng-template>
+    
+    
+    
+    </div>
+    

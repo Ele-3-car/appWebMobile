@@ -1,0 +1,35 @@
+.sfondo{
+    background-color: lightgray;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 25rem;
+    border-radius: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border: 1px solid rgb(138, 138, 177);
+    margin-top: 2rem;
+}
+
+.registrati{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.login{
+    display: flex;
+    justify-content: center;    
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60%;
+    margin-top: 3rem;
+    
+}
+
+

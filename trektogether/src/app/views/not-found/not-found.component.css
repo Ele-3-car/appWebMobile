@@ -1,0 +1,34 @@
+div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 1.5rem;
+    font-weight: 100;
+    height: 15rem;
+}
+
+a{
+    font-size: 1.1rem;
+    background-color: whitesmoke;
+    color: #1F618D;
+    border-radius: 10rem;
+    padding: 0.7rem 1rem;
+    margin: 1rem;
+    text-decoration: none;
+    transition: background-color 0.3 ease;
+}
+
+
+a:hover{
+    transition: all 0.3s ease-in-out;
+    background-color: #364b66;
+    color: white;
+    cursor: pointer;
+}
+
+p{
+    margin: 1rem;
+    
+ 
+}

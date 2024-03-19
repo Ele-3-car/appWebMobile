@@ -1,0 +1,52 @@
+
+<button mat-button (click)="goBack()"><mat-icon>arrow_back</mat-icon></button>
+
+
+<div class="container" *ngIf="spot">
+    <img [src]="spot.image" [alt]="spot.name">
+
+    <div class="details">
+        <div class="header">
+            <span class="name">
+                {{ spot.name }}
+            </span>
+            <span class="favorite {{spot.favorite? '' : 'not'}}" >
+                ❤️
+            </span>
+        </div>
+        <div class="city">
+            <mat-icon>location_on</mat-icon> {{ spot.city }}
+        </div>
+        <div class="durata">
+            ⏱️ {{spot.duration}} Giorni
+        </div>
+        <div class="rating">
+            <app-star-rating [star]="spot.stars"></app-star-rating>
+        </div>
+
+        <!--TODO implement hotel rest-->
+        
+        <div class="visited">
+            <p>visit in chronological order:</p>
+            <a *ngFor="let visit of spot.visited">
+            {{visit}},
+            </a>
+        </div>
+
+        <div class="description">
+            {{ spot.description }}
+        </div>
+
+        <div class="forEat">
+            <p>place where we eat:</p>
+            <a *ngFor="let eat of spot.toEat">     
+            {{eat}},
+            </a>
+        </div>
+
+       
+
+        
+        
+    </div>
+</div>

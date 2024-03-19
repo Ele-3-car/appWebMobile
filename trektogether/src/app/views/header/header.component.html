@@ -1,0 +1,44 @@
+<header>
+    <nav>
+      <mat-toolbar>
+        <div class="img">
+          <img src="../../../assets/images/logo.jpg">
+          <div class="title">
+            <span>TrekTogether</span>
+          </div>
+        </div>
+  
+        <!-- Menu principale -->
+        <div class="logbuttons" *ngIf="!showMobileMenu">
+          <button mat-button routerLink="" routerLinkActive="active">Home page</button>
+          <button mat-button class="accedi" routerLink="/login" routerLinkActive="active" *ngIf="!isAuth">Accedi/Registrati</button>
+          <button mat-button routerLink="/contatti" routerLinkActive="active">Contatti</button>
+          <button mat-button [mat-menu-trigger-for]="menu" *ngIf="isAuth">{{user.name}}</button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item routerLink="/profilo" routerLinkActive="active" routerLink="/profile">Profilo</button>
+            <button mat-menu-item routerLink="/logout" routerLinkActive="active" (click)="logout()">Logout</button>
+          </mat-menu>
+        </div>
+  
+        <!-- Menu mobile -->
+        <div class="mobileMenu" >
+          <button mat-icon-button [matMenuTriggerFor]="mainMenu">
+            <mat-icon>more_vert</mat-icon>
+          </button>
+          <mat-menu #mainMenu="matMenu">
+            <button mat-menu-item routerLink="" routerLinkActive="active">Home page</button>
+            <button mat-menu-item class="accedi" routerLink="/login" routerLinkActive="active" *ngIf="!isAuth">Accedi/Registrati</button>
+            <button mat-menu-item routerLink="/contatti" routerLinkActive="active">Contatti</button>
+            <button mat-menu-item [matMenuTriggerFor]="userMenu" *ngIf="isAuth">{{user.name}}</button>
+          </mat-menu>
+  
+          <!-- Menu dell'utente -->
+          <mat-menu #userMenu="matMenu">
+            <button mat-menu-item routerLink="/profilo" routerLinkActive="active" routerLink="/profile">Profilo</button>
+            <button mat-menu-item routerLink="/logout" routerLinkActive="active" (click)="logout()">Logout</button>
+          </mat-menu>
+        </div>
+      </mat-toolbar>
+    </nav>
+  </header>
+  

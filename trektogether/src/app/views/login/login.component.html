@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="details">
+        
+
+        <form [formGroup]="loginForm" (ngSubmit)="submit()">
+            <div class="sfondo">
+                <a class="welcome">È bello rivederti qui</a>
+                <a class="title">Accedi</a>
+                <text-input 
+        [control]="fc.username"
+        [showErrorsWhen]="isSubmitted"
+        type="email"
+        label="Email">
+
+        </text-input>
+
+
+        <text-input 
+        [control]="fc.password"
+        [showErrorsWhen]="isSubmitted"
+        type="password"
+        label="Password">
+
+        </text-input>
+
+        <default-button text="Login">
+
+        </default-button>
+
+        <div class="register">
+            Sei un nuovo utente? &nbsp;
+            <a routerLink="/register" [queryParams]="{returnURL : returnURL}">
+            Registrati qui!
+            </a>
+        </div>
+            </div>
+        
+
+            
+        </form>
+    </div>
+</div>
