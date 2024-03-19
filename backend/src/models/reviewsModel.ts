@@ -9,7 +9,7 @@ export interface review{
 
 export const reviewSchema = new Schema<review>(
     {
-        name: {type: String, required: true},
+        name: {type: String, required: false},
         review: {type: String, required: true},
         stars: {type: Number, required: true},
     },{
