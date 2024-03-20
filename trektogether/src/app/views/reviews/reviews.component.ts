@@ -29,6 +29,7 @@ export class ReviewsComponent implements OnInit{
   ngOnInit(): void {
     this.creationForm = this.formBuilder.group({
       name: [''],
+      image: [''],
       review: [''],
       stars: [''],
     });
@@ -44,6 +45,7 @@ export class ReviewsComponent implements OnInit{
     const fv = this.creationForm.value;
     const reviewCreated : reviews ={
       id: '',
+      image: fv.image,
       name: fv.name,
       review: fv.review,
       stars: fv.stars,

@@ -188,6 +188,7 @@ ul .recensioni{
 .ReviewStars{
     display: flex;
     align-items: center;
+    justify-content: center;
     padding: 0.2rem;
 
 }
@@ -202,6 +203,21 @@ ul .recensioni{
     -webkit-line-clamp: 2; 
     text-overflow: ellipsis;
 }
+
+.recensione{
+    display: flex;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+
+.recensione li a img{
+    width: 50px; /* Regola la dimensione dell'immagine come desideri */
+    height: 50px; /* Regola la dimensione dell'immagine come desideri */
+    border-radius: 50%; /* Rende l'immagine circolare */
+    display: block; /* Assicura che l'immagine sia centrata */
+    margin: 0 auto;
+}
+
 
 /*PARTE DELLA PAGINA DI WELCOME*/
 
@@ -318,9 +334,15 @@ app-search{
     font-size: 16px; /* Dimensione del testo */
     font-weight: bold; /* Grassetto */
     cursor: pointer; /* Cambia il cursore al passaggio del mouse */
-    background: linear-gradient(to right, #007bff, #ff007f); /* Background lineare */
+    background: linear-gradient(to right, #007bff, #83e63d); /* Background lineare */
+    background-size: 200% auto; /* Incrementa la dimensione del gradiente */
+    transition: background-position 0.5s; /* Transizione fluida */
 }
-  
+
+.crea:hover{
+    background-position: right center;
+}
+
 
 
   

@@ -11,4 +11,4 @@ export const USER_REGISTER_URL = BASE_URL + '/api/users/register';
 
 export const SPOT_CREATE_URL = BASE_URL + '/api/spots/create';
 
-export const REVIEWS_CREATE_URL = BASE_URL + '/api/reviews/create';
+export const REVIEWS_CREATE_URL = BASE_URL + '/api/reviews';

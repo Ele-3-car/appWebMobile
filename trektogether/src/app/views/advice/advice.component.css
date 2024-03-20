@@ -67,3 +67,9 @@ body {
     background-color: #45a049;
   }
   
+  .content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+

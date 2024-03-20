@@ -7,6 +7,7 @@ import { Observable } from 'rxjs';
 import { UserService } from 'src/app/controllers/user.service';
 import { user } from 'src/app/shared/user';
 import { reviews } from 'src/app/models/reviews';
+import { ReviewService } from 'src/app/controllers/review.service';
 
 @Component({
   selector: 'app-home',
@@ -19,14 +20,14 @@ review: reviews[] = [];
 user !: user;
 showWelcomeScreen: boolean = true;
   constructor(private spotService:SpotService, private activatedRoute: ActivatedRoute,
-    private userService: UserService) {
+    private userService: UserService, private reviewService : ReviewService) {
     
       userService.userObservable.subscribe((newUser)=>{
         this.user = newUser;
       });
     
     let spotsObservable : Observable<Spot[]>;
-
+    let reviewObservable : Observable<reviews[]>;    
     activatedRoute.params.subscribe((params)=>{
       if(params.searchTerm){
         spotsObservable = this.spotService.getAllSpotsBySearchTerm(params.searchTerm);
@@ -34,10 +35,16 @@ showWelcomeScreen: boolean = true;
       }else{
         spotsObservable = spotService.getAll();
         this.showWelcomeScreen = true;
+
+        reviewObservable = reviewService.getAll();
       }
 
       spotsObservable.subscribe((serverspots) =>{
         this.spots = serverspots;
+      })
+
+      reviewObservable.subscribe((serverReview)=>{
+        this.review = serverReview;
       })
     })
     
@@ -53,6 +60,8 @@ showWelcomeScreen: boolean = true;
     });
     
   }
+
+ 
 
   get isAuth(){
     return this.user.token;

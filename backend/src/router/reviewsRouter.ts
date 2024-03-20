@@ -1,7 +1,7 @@
 import {Router} from "express";
 import expressAsyncHandler from "express-async-handler";
 import { review, reviewModel } from "../models/reviewsModel";
-import { userModel } from "../models/userModel";
+import { userModel, userSchema } from "../models/userModel";
 
 const router = Router();
 
