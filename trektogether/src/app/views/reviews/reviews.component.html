@@ -6,6 +6,12 @@
         <form [formGroup]="creationForm" (ngSubmit)="create()">
             <div class="one">
             <text-input
+            [control]="fc.name"
+            [showErrorsWhen]="reviewIsCreated"
+            label="Username">
+            </text-input>
+
+            <text-input
             [control]="fc.review"
             [showErrorsWhen]="reviewIsCreated"
             label="Scrivi qui la tua recensione!">

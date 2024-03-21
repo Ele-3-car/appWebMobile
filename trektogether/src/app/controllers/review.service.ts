@@ -4,7 +4,7 @@ import { BehaviorSubject, Observable, tap } from 'rxjs';
 import { ICreateReview } from '../shared/interfaces/ICreateReviews';
 import { ToastrService } from 'ngx-toastr';
 import { reviews } from '../models/reviews';
-import { REVIEWS_CREATE_URL } from '../shared/costants/urls';
+import { REVIEWS_CREATE_URL, REVIEWS_VIEW } from '../shared/costants/urls';
 
 @Injectable({
   providedIn: 'root'
@@ -19,7 +19,7 @@ export class ReviewService {
 
 
   getAll(): Observable<reviews[]> {
-    return this.httpClient.get<reviews[]>(REVIEWS_CREATE_URL);
+    return this.httpClient.get<reviews[]>(REVIEWS_VIEW);
   }
 
   createReview(NewReview : ICreateReview): Observable<reviews>{
@@ -33,8 +33,7 @@ export class ReviewService {
         error: (errorResponse) =>{
           this.toastrServices.error(errorResponse.error, 'Review creation failed');
         }
-      })
-        
+      })  
     );
   }
 

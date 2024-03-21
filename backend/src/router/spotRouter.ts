@@ -50,7 +50,7 @@ router.get("/:spotId", expressAsyncHandler(
 router.post('/create', expressAsyncHandler(
     async(req,res) =>{
 
-        
+        const user = await userModel.findById(req.params.userId)
         //prendo i dati dal body
         const {city, name, shortDescription,description,image,
         stars, visited, toEat, duration, favorite} = req.body;

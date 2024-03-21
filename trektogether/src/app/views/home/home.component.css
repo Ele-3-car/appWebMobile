@@ -218,6 +218,31 @@ ul .recensioni{
     margin: 0 auto;
 }
 
+.example-card {
+    background-color: rgb(250, 248, 248);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    max-width: 400px;
+    padding: 1rem;
+    margin: 3rem;
+    margin-top: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+.recensioni{
+    display: flex;
+    justify-content: center;
+}
+
+.recensioniTitolo{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    font-weight: bold;
+}
+ 
+
+
 
 /*PARTE DELLA PAGINA DI WELCOME*/
 

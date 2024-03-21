@@ -33,7 +33,7 @@ import { ProfileComponent } from './views/profile/profile.component';
 import { ContattiComponent } from './views/contatti/contatti.component';
 import { AdviceComponent } from './views/advice/advice.component';
 import { ReviewsComponent } from './views/reviews/reviews.component';
-
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -73,7 +73,8 @@ import { ReviewsComponent } from './views/reviews/reviews.component';
       positionClass: "toast-bottom-right",
       newestOnTop: false,
     }),
-    MatMenuModule
+    MatMenuModule,
+    MatCardModule
   ],
   providers: [
     {provide:HTTP_INTERCEPTORS, useClass: LoadingInterceptorTsInterceptor, multi:true}

@@ -15,7 +15,7 @@ router.get("/", expressAsyncHandler(
 
 router.post("/create", expressAsyncHandler(
     async(req,res)=>{
-        const {name, review, stars} = req.body;
+        const { name,review, stars} = req.body;
         const newReview: review = {
             id: '',
             name,

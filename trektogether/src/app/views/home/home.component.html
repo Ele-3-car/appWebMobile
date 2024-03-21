@@ -29,23 +29,21 @@
     
                 <app-carousel [images]="immagini" [autoSlide]="true"></app-carousel>
             </div>
-                <ul class="recensioni">
-                    <li *ngFor="let reviews of review">
-                        <a class="containerRev" routerLink="/reviews/{{reviews.id}}">
-                            <div class="review">
-                                <div class="Author">
-                                    {{reviews.name}}
-                                </div>
-                                <div class="ReviewStars">
-                                    <app-star-rating [star]="reviews.stars"></app-star-rating>
-                                </div>
-                                <div class="recensione">
-                                    {{reviews.review}}
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
+            <h1 class="recensioniTitolo">Ecco cosa pensano gli utenti di noi!</h1>
+                <div class="recensioni">
+                    
+                    <mat-card class="example-card" *ngFor="let reviews of review">
+                        <mat-card-subtitle>{{reviews.name}}</mat-card-subtitle> 
+                        <mat-card-header>
+                           
+                          <app-star-rating [star]="reviews.stars"></app-star-rating>
+                        </mat-card-header>
+                        <mat-card-content>
+                          <p>{{reviews.review}}</p>
+                          
+                        </mat-card-content>
+                      </mat-card>
+                </div>
             </div>
 
             
