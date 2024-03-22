@@ -50,7 +50,7 @@ main {
 .how-to-use {
   background-color: white;
   border-radius: 10px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
@@ -71,7 +71,7 @@ main {
 
 .review {
   text-align: center;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  
   background-color: #fff;
   border-radius: 10px;
   padding: 20px;
