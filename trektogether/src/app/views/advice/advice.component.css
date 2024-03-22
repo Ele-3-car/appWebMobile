@@ -1,75 +1,142 @@
 body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  header {
-    background-color: #4a7695;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    margin-left: 1.2rem;
-    margin-right: 1.2rem;
-    margin-top: 0.5rem;
-    border-radius: 10px;
-    
-  }
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
 
-  header h1{
-    color: #f2f2f2;
-    font-size: 2rem;
-  }
-  
-  main {
-    padding: 20px;
-  }
-  
-  .tip-to-trip {
-    margin-bottom: 40px;
-  }
-  
-  .how-to-use {
-    background-color: #f2f2f2;
-    padding: 20px;
-    border-radius: 5px;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-  }
-  
-  footer {
-    background-color: #284253;
-    color: white;
-    text-align: center;
-    padding: 2px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 20px;
-  }
-  
-  button {
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin-bottom: 20px;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-  
-  button:hover {
-    background-color: #45a049;
-  }
-  
-  .content{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
+.logo{
+  width: 50px;
+  height: auto;
+  position: relative;
+  top: 0.8rem;
+  border-radius: 10px;
+}
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  
+}
+
+header {
+  background: linear-gradient(to right,#364b66, #5f9a1b, #364b66);
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 1rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+header h1 {
+  font-size: 3em;
+  letter-spacing: 5px;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgb(0, 0, 0);
+  margin-bottom: 10px;
+  margin-bottom: 1rem;
+}
+
+header p {
+  font-size: 1.2em;
+}
+
+main {
+  padding: 20px 0;
+}
+
+.how-to-use {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  padding: 2rem;
+  
+}
+
+.how-to-use h2 {
+  color: #22456a;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.how-to-use ol {
+  list-style-type: decimal;
+  padding-left: 20px;
+}
+
+.review {
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 1rem
+  
+}
+
+.review h2 {
+  color: #007bff;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.review p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.review button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.review button:hover {
+  background-color: #0056b3;
+}
+
+footer {
+  background-color: #007bff;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+
+#descrizione {
+  background-color: #f9f9f9;
+  padding: 20px ;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 2rem;
+  margin-left: 2rem;
+}
+
+#descrizione h2 {
+  color: #1c8a1c;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+#descrizione p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.container2{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 1rem;
+  margin-right: 2rem;
+  margin-left: 2rem;
+}

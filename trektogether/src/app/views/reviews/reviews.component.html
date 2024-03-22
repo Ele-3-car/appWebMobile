@@ -1,32 +1,30 @@
-
-
 <div class="container">
     <div class="details">
-        <a>Crea il tuo spot!</a>
-        <form [formGroup]="creationForm" (ngSubmit)="create()">
-            <div class="one">
-            <text-input
-            [control]="fc.name"
-            [showErrorsWhen]="reviewIsCreated"
-            label="Username">
-            </text-input>
-
-            <text-input
-            [control]="fc.review"
-            [showErrorsWhen]="reviewIsCreated"
-            label="Scrivi qui la tua recensione!">
-            </text-input>
-
-            <text-input
-            [control]="fc.stars"
-            [showErrorsWhen]="reviewIsCreated"
-            label="Inserisci quante stelle ci dai!">
-            </text-input>
-
+      <h2>Racconta la tua esperienza</h2>
+      <form [formGroup]="creationForm" (ngSubmit)="create()">
+        <div class="form-group">
+          <label for="name">Username</label>
+          <input type="text" id="name" name="name" formControlName="name" required>
+          <span class="error-message" *ngIf="reviewIsCreated && fc.name.invalid">Il nome è obbligatorio</span>
         </div>
-
-            <default-button text="Crea"></default-button>
-        </form>
-        <button (click)="goBack()">Torna indietro</button>
+  
+        <div class="form-group">
+          <label for="review">Scrivi qui la tua recensione!</label>
+          <textarea id="review" name="review" formControlName="review" required></textarea>
+          <span class="error-message" *ngIf="reviewIsCreated && fc.review.invalid">La recensione è obbligatoria</span>
+        </div>
+  
+        <div class="form-group">
+          <label for="stars">Inserisci quante stelle ci dai!</label>
+          <input type="number" id="stars" name="stars" formControlName="stars" min="1" max="5" required>
+          <span class="error-message" *ngIf="reviewIsCreated && fc.stars.invalid">Il numero di stelle è obbligatorio (da 1 a 5)</span>
+        </div>
+        <div class="buttons">
+            <button class="crea" type="submit">Crea</button>
+            <button class="back" (click)="goBack()">Torna indietro</button>
+        </div>
+        
+      </form>
+      
     </div>
-</div>
+  </div>

@@ -232,15 +232,35 @@ ul .recensioni{
 .recensioni{
     display: flex;
     justify-content: center;
+    background-color: #456083;
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
 
 .recensioniTitolo{
+    position: relative;
+    top: 1rem;
     display: flex;
+    color: #364b66;
     justify-content: center;
     margin-top: 2rem;
     font-weight: bold;
+    background-color: #fff;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    border-top-left-radius: 10px; 
+    border-top-right-radius: 10px;
 }
- 
+
+mat-card-subtitle{
+    display: flex;
+    position: relative;
+
+}
+
+
+
+
 
 
 

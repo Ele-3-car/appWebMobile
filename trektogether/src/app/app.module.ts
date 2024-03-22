@@ -34,7 +34,7 @@ import { ContattiComponent } from './views/contatti/contatti.component';
 import { AdviceComponent } from './views/advice/advice.component';
 import { ReviewsComponent } from './views/reviews/reviews.component';
 import {MatCardModule} from '@angular/material/card';
-
+import {MatFormFieldModule} from '@angular/material/form-field';
 @NgModule({
   declarations: [
     AppComponent,
@@ -74,7 +74,8 @@ import {MatCardModule} from '@angular/material/card';
       newestOnTop: false,
     }),
     MatMenuModule,
-    MatCardModule
+    MatCardModule,
+    MatFormFieldModule
   ],
   providers: [
     {provide:HTTP_INTERCEPTORS, useClass: LoadingInterceptorTsInterceptor, multi:true}
