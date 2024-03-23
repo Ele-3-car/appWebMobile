@@ -6,12 +6,16 @@ export interface user{
     email: string;
     password: string;
     name: string;
+    description: string;
+    interests: string;
     token: string;
     isAdmin: boolean;
 }
 
 export const userSchema = new Schema<user>({
     name: {type: String, required: true},
+    description: {type: String, required: true},
+    interests: {type:String, required: true},
     email: {type: String, required: true, unique:true},
     token: {type: String, required:false},
     password: {type: String, required: true},

@@ -35,6 +35,7 @@ import { AdviceComponent } from './views/advice/advice.component';
 import { ReviewsComponent } from './views/reviews/reviews.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatFormFieldModule} from '@angular/material/form-field';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -57,6 +58,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     ContattiComponent,
     AdviceComponent,
     ReviewsComponent,
+    
   ],
   imports: [
     BrowserModule,

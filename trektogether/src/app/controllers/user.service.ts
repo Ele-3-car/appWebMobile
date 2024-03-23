@@ -59,6 +59,10 @@ public userObservable : Observable<user>;
     window.location.reload();
    }
 
+   getCurrentUser(): user {
+    return this.userSubject.value;
+  }
+
    private setUserToLocalStorage(user:user){
     localStorage.setItem(USER_KEY, JSON.stringify(user));
    }

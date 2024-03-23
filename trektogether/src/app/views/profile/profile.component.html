@@ -1,1 +1,17 @@
-<p>profile works!</p>
+<div class="profile-container">
+  <div *ngIf="user" class="profile-info">
+    <div class="profile-header">
+      <h2>Profilo di {{ user.name }}:</h2>
+      <div class="image">
+        <img src="../../../assets/user.jpg" alt="Immagine profilo">
+      </div>
+    </div>
+    <div class="details">
+      <div>
+        <p><strong>Email:</strong> {{ user.email }}</p>
+        <p><strong>Descrizione:</strong> {{ user.description }}</p>
+        <p><strong>Interessi:</strong> {{ user.interests }}</p>
+      </div>
+    </div>
+  </div>
+</div>

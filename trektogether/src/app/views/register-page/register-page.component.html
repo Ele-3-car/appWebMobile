@@ -1,51 +1,60 @@
 <div class="container">
     <div class="details">
-        
-             
-        
-            <form [formGroup]="registerForm" (ngSubmit)="submit()">
-                <div class="sfondo">
-                <a class="registrati">Registrati !</a>
-                <text-input
-                [control]="fc.name"
-                [showErrorsWhen]="isSubmitted"
-                label="Name">
-                </text-input>
+        <h1>Registrazione utente</h1>
+        <form [formGroup]="registerForm" (ngSubmit)="submit()">
+            <div class="form-section">
+                <div class="column-left">
+                    <text-input
+                        [control]="fc.name"
+                        [showErrorsWhen]="isSubmitted"
+                        label="Name">
+                    </text-input>
 
-                <text-input
-                [control]="fc.email"
-                [showErrorsWhen]="isSubmitted"
-                label="Email"
-                type="email">
-                </text-input>
+                    <text-input
+                        [control]="fc.email"
+                        [showErrorsWhen]="isSubmitted"
+                        label="Email"
+                        type="email">
+                    </text-input>
 
-                <text-input
-                [control]="fc.password"
-                [showErrorsWhen]="isSubmitted"
-                label="Password"
-                type="password">
-                </text-input>
+                    <text-input
+                        [control]="fc.password"
+                        [showErrorsWhen]="isSubmitted"
+                        label="Password"
+                        type="password">
+                    </text-input>
 
-                <text-input
-                [control]="fc.confirmPassword"
-                [showErrorsWhen]="isSubmitted"
-                label="Conferma Passwrod"
-                type="password">
-                </text-input>
+                    <text-input
+                        [control]="fc.confirmPassword"
+                        [showErrorsWhen]="isSubmitted"
+                        label="Conferma Password"
+                        type="password">
+                    </text-input>
+                </div>
 
-                <default-button text="Registrati"></default-button>
+                <div class="column-right">
+                    <div class="input-container">
+                        <label for="description">Descrizione dettagliata</label>
+                        <textarea id="description" name="description" formControlName="description" rows="5" placeholder="Inserisci una breve descrizione di te stesso..."></textarea>
+                    </div>
 
-                <div class="login">
-                    Sei già un utente? &nbsp;
-                    <a routerLink="/login" [queryParams]="{returnUrl: returnUrl}">
-                    Loggati qui!
-                    </a>
+                    <div class="input-container">
+                        <label for="interests">Interessi</label>
+                        <textarea id="interests" name="interests" formControlName="interests" rows="5" placeholder="Scrivi i tuoi interessi..."></textarea>
+                    </div>
                 </div>
             </div>
 
-             
+            <div class="button-container">
+                <default-button text="Registrati"></default-button>
+            </div>
 
-             </form>
+            <div class="login">
+                Sei già un utente? &nbsp;
+                <a routerLink="/login" [queryParams]="{returnUrl: returnUrl}">
+                    Loggati qui!
+                </a>
+            </div>
+        </form>
     </div> 
-    
 </div>

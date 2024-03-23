@@ -46,11 +46,11 @@ router.post("/login", expressAsyncHandler(
 router.post('/register',expressAsyncHandler(
     async(req, res) =>{
         //prendo i dati dal body
-        const {name, email, password} = req.body;
+        const {name, email, password, description, interests} = req.body;
         //cerco se esiste un utente con la stessa email
         const user = await userModel.findOne({email});
         if(user){
-            res.status(HTTP_BAD_REQUEST).send('user alredy exsist');
+            res.status(HTTP_BAD_REQUEST).send('utente già esistente');
             return;
         }
         //creo il mio valore casuale salt da associare alla password ahshata dell'utente
@@ -60,6 +60,8 @@ router.post('/register',expressAsyncHandler(
         //creo un nuovo utente
         const newUser: user ={
             id: '',
+            description,
+            interests,
             name,
             email: email.toLowerCase(),
             password: encryptedPassword,

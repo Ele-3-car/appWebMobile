@@ -1,35 +1,89 @@
-.sfondo{
-    background-color: lightgray;
-    padding: 2rem;
+.container {
     display: flex;
-    flex-direction: column;
     position: relative;
-    width: 25rem;
-    border-radius: 2rem;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    border: 1px solid rgb(138, 138, 177);
-    margin-top: 2rem;
-}
-
-.registrati{
-    display: flex;
-    justify-content: center;
-    margin-bottom: 1rem;
-    font-size: 1.3rem;
-}
-
-.login{
-    display: flex;
-    justify-content: center;    
-}
-
-.container{
-    display: flex;
     justify-content: center;
     align-items: center;
-    height: 60%;
-    margin-top: 3rem;
-    
-}
+    height: 100vh;
+    bottom: 2rem;
+  }
+  
+  .details {
+    background-color: lightgray;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 600px;
+    border: #1e477dab 1px solid;
+  }
+  
+  .form-section {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  .column-left {
+    flex: 1;
+    padding-right: 20px;
+  }
+  
+  .column-right {
+    flex: 1;
+    padding-left: 20px;
+  }
+  
+  .input-container {
+    margin-bottom: 15px;
+  }
+  
+  .input-container label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .input-container textarea,
+  .input-container input[type="password"],
+  .input-container input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .default-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .default-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .login {
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  .login a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .login a:hover {
+    text-decoration: underline;
+  }
+  
 
+  h1{
+    display: flex;
+    justify-content: center;
+  }
 
