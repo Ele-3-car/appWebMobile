@@ -30,7 +30,7 @@ export class CreateSpotComponent implements OnInit{
       name: ['', [Validators.required,Validators.minLength(5)]],
       city: ['', [Validators.required]],
       description: ['', [Validators.required]],
-      shortDescription: ['', [Validators.required,Validators.maxLength(50)]],
+      shortDescription: ['', [Validators.required,Validators.maxLength(150)]],
       stars: ['', [Validators.required,Validators.min(0),Validators.max(5)]],
       visited: ['', [Validators.required]],
       toEat: ['', [Validators.required]],
