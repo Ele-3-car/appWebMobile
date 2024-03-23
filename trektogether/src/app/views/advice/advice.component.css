@@ -28,6 +28,8 @@ header {
   margin-top: 1rem;
   margin-left: 2rem;
   margin-right: 2rem;
+  border: 8px solid;
+  border-color: #f9f9f9;
 }
 
 header h1 {
@@ -71,7 +73,6 @@ main {
 
 .review {
   text-align: center;
-  
   background-color: #fff;
   border-radius: 10px;
   padding: 20px;
@@ -104,12 +105,22 @@ main {
   background-color: #0056b3;
 }
 
-footer {
-  background-color: #007bff;
-  color: #fff;
+footer{
+  background-color: #f2f2f2;
+  padding: 20px 0;
   text-align: center;
-  padding: 10px 0;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
+  footer p{
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+  }
+  footer a{
+    color: #007bff;
+    text-decoration: none;
+  }
 
 #descrizione {
   background-color: #f9f9f9;
@@ -139,4 +150,12 @@ footer {
   margin-top: 1rem;
   margin-right: 2rem;
   margin-left: 2rem;
+}
+
+.immagine img{
+  width: 25rem;
+  height: 14.5rem;
+  border-radius:10px ;
+  border: 5px solid;
+  border-color: #fff;
 }
