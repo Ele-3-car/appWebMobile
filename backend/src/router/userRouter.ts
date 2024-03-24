@@ -6,6 +6,7 @@ import { user, userModel } from "../models/userModel";
 import { HTTP_BAD_REQUEST } from "../costants/httpStatus";
 import bcrypt from 'bcryptjs'
 const router = Router();
+const crypto = require('crypto');
 
 //injecto gli utenti di esempio
 router.get("/seed", expressAsyncHandler(
@@ -77,15 +78,20 @@ router.post('/register',expressAsyncHandler(
 //funzione che genera il token
 const generateTokenResponse = (user : any) =>{
     //creo il token con i dati dell'utente
+    const secretKey = generateSecretKey();
     const token = jwt.sign({
-        email: user.email, isAdmin: user.isAdmin
-    },"SomeRandomText",{
+        email: user.email, isAdmin: user.isAdmin    
+    },secretKey,{
         expiresIn: "30d"
     })
     //aggiungo il token all'utente
     user.token = token;
 
     return user;
+}
+
+const generateSecretKey= () =>{
+    return crypto.randomBytes(32).toString('hex')
 }
 
 

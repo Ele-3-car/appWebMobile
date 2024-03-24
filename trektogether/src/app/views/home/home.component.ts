@@ -35,7 +35,6 @@ showWelcomeScreen: boolean = true;
       }else{
         spotsObservable = spotService.getAll();
         this.showWelcomeScreen = true;
-
         reviewObservable = reviewService.getAll();
       }
 
@@ -92,7 +91,15 @@ showWelcomeScreen: boolean = true;
       imageAlt: "londra"
     },
     {
+      imageSrc: "../src/../../../assets/images/7.png",
+      imageAlt: "londra"
+    },
+    {
       imageSrc: "../src/../../../assets/carouselIMG/5.png",
+      imageAlt: "londra"
+    },
+    {
+      imageSrc: "../src/../../../assets/images/8.png",
       imageAlt: "londra"
     },
   ]
