@@ -90,6 +90,7 @@ const generateTokenResponse = (user : any) =>{
     return user;
 }
 
+//genero il salt cryptato in 32 bit per il token
 const generateSecretKey= () =>{
     return crypto.randomBytes(32).toString('hex')
 }
